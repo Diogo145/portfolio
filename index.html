@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Diogo Soares</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <script defer src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Diogo Soares</h1>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre Mim</h2>
+        <div class="sobre-card">
+            <div class="sobre-foto">
+                <img src="media/perfil.jpeg" alt="Foto de Diogo Soares" />
+            </div>
+            <div class="sobre-info">
+                <p>
+                    Olá! O meu nome é Diogo Soares, finalista da licenciatura em informática e multimédia, com um olhar criativo e técnico para o design
+                    digital, desenvolvimento web (frontend e backend) e experiências interativas. A minha abordagem une estética
+                    e funcionalidade, garantindo soluções modernas, intuitivas e eficientes.
+                </p>
+                <p>
+                    Tenho experiência prática em várias tecnologias e ferramentas, desde o desenvolvimento frontend e
+                    backend até ao design UI/UX e desenvolvimento de jogos. Tenho também grande interesse em análise de
+                    dados, explorando formas de extrair insights valiosos para suportar decisões. Gosto de resolver
+                    problemas, aprender constantemente e colaborar em projetos que façam a diferença.
+                </p>
+                <h3>Competências Técnicas</h3>
+                <ul class="skills">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Figma</li>
+                    <li>Unity</li>
+                    <li>React</li>
+                    <li>Git</li>
+                </ul>
+                <a href="media/cv.pdf" download="CV-Diogo-Soares.pdf" class="cvdownload">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2>Projetos</h2>
+        <div id="project-list" class="project-list">
+            <!-- Projetos serão carregados aqui via JS -->
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <form id="contact-form">
+            <input type="text" name="nome" placeholder="Nome" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Diogo Soares</p>
+    </footer>
+</body>
+
+</html>
