@@ -22,21 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
             nome: "Portfolio Pessoal",
             descricao: "Website pessoal com HTML, CSS e JavaScript puro para mostrar projetos e contacto.",
             tecnologias: ["HTML", "CSS", "JavaScript"],
-            link: "#",
+            link: "proj1.html",
             imagem: "media/portfolio.jpg"
         },
         {
             nome: "Website Estaleiro de Sarilhos Pequenos",
             descricao: "Website institucional desenvolvido para o Estaleiro de Sarilhos Pequenos, apresentando informações sobre serviços, história, projetos, entre outros, com design responsivo e otimizado para diferentes dispositivos.",
             tecnologias: ["WordPress", "PHP", "CSS", "HTML", "JavaScript"],
-            link: "#",
+            link: "proj2.html",
             imagem: "media/estaleiro.jpg" 
         },
         {
             nome: "App de reservas de barbearia",
             descricao: "Aplicação para agendamento de serviços de barbearia, com funcionalidades de login, gestão de reservas e notificações.",
             tecnologias: ["Kotlin", "Firebase", "Android"],
-            link: "#",
+            link: "proj3.html",
             imagem: "media/barbearia.jpeg"
         }
     ];
