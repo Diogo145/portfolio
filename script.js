@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             nome: "App de reservas de barbearia",
             descricao: "Aplicação para agendamento de serviços de barbearia, com funcionalidades de login, gestão de reservas e notificações.",
-            tecnologias: ["PHP", "HTML", "CSS", "JavaScript"],
+            tecnologias: ["Kotlin", "Firebase", "Android"],
             link: "#",
-            imagem: "media/projeto3.jpg"
+            imagem: "media/barbearia.jpeg"
         }
     ];
 
@@ -59,3 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector("nav ul");
+
+    toggleBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+});
+
