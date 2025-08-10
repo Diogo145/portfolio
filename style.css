@@ -1,93 +1,122 @@
 /* === ESTILOS BASE === */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 header {
-    background-color: #0049bd;
-    color: #fff;
+  background-color: #0049bd;
+  color: #fff;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    padding: 1rem 2rem;
-    color: white;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: white;
 }
 
 nav h1 {
-    margin: 0;
-    font-size: 2.4rem;
+  margin: 0;
+  font-size: 2.4rem;
 }
 
 nav h1 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav h1 a:hover {
+  color: rgb(0, 10, 100);
+  text-decoration: none;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-    margin-left: auto;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 section {
-    padding: 3rem 2rem;
+  padding: 3rem 2rem;
 }
 
 .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: auto;
+  list-style: none;
+  padding: 0;
 }
 
 .skills li {
-    background: #ddd;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  font-size: 3rem;
+  /* tamanho dos ícones */
+}
+
+.skills li span {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skills li:hover {
+  transform: scale(1.1);
+}
+
+.skills li:hover span {
+  opacity: 1;
 }
 
 .cvdownload {
-    background-color: #0049bd;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #0049bd;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .cvdownload:hover {
-    background-color: #00286b;
+  background-color: #00286b;
 }
 
 .project-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease;
+  transform: scale(1.05);
 }
 
 .project-card {
@@ -97,6 +126,7 @@ section {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .project-card img {
@@ -106,7 +136,28 @@ section {
 }
 
 .project-card-content {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
+  flex-grow: 1;
+}
+
+.project-card-content a {
+  display: inline-block;
+  background-color: #0049bd;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.project-card-content a:hover {
+  background-color: #00286b;
 }
 
 
@@ -117,10 +168,14 @@ section {
   align-items: flex-start;
   max-width: 1200px;
   margin: auto;
-  border: 2px solid #ddd; /* Contorno */
-  border-radius: 8px;     /* Cantos arredondados */
-  padding: 2rem;          /* Espaço interno para não colar o texto à borda */
-  background-color: #fff; /* Para destacar do fundo */
+  border: 2px solid #ddd;
+  /* Contorno */
+  border-radius: 8px;
+  /* Cantos arredondados */
+  padding: 2rem;
+  /* Espaço interno para não colar o texto à borda */
+  background-color: #fff;
+  /* Para destacar do fundo */
 }
 
 
@@ -145,8 +200,8 @@ section {
 }
 
 h2 {
-    text-align: center;
-    font-size: 2.4rem;
+  text-align: center;
+  font-size: 2.4rem;
 }
 
 @media (max-width: 768px) {
@@ -165,59 +220,238 @@ h2 {
   }
 }
 
+/* Contacto: layout lado a lado e estilo do formulário melhorado */
+
+.contacto h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-container {
+  display: flex;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Cartão único que envolve texto e formulário */
+.contact-card {
+  display: flex;
+  gap: 3rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Texto informativo */
+.contact-info {
+  flex: 1 1 300px;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.contact-info h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #0049bd;
+}
+
+.contact-info a {
+  color: #0049bd;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Formulário */
 .contacto form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 500px;
-    margin: auto;
+  flex: 1 1 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contacto form button[type="submit"] {
+  background-color: #0049bd;
+  /* azul */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 1.2rem 2rem;
+  /* maior altura e um pouco de largura */
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contacto form button[type="submit"]:hover {
+  background-color: #00286b;
+  /* azul mais escuro no hover */
 }
 
 .contacto input,
 .contacto textarea {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  padding: 0.9rem 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: vertical;
+}
+
+.contacto input:focus,
+.contacto textarea:focus {
+  border-color: #0049bd;
+  box-shadow: 0 0 8px rgba(0, 73, 189, 0.5);
+  outline: none;
+}
+
+.contacto textarea {
+  min-height: 120px;
+}
+
+/* Responsivo: empilha no mobile */
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .contact-info,
+  .contacto form {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 
 footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #222;
-    color: #fff;
-    margin-top: 2rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: #222;
+  color: #fff;
+  margin-top: 2rem;
 }
 
 /* Botão hambúrguer */
 .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
 }
 
 /* Responsivo: mostra o hambúrguer e esconde menu */
 @media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #0049bd;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 1rem;
-        border-radius: 0 0 8px 8px;
-    }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #0049bd;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+  }
 
-    nav ul.show {
-        display: flex;
-    }
+  nav ul.show {
+    display: flex;
+  }
 
-    .menu-toggle {
-        display: block;
-        margin-left: auto;
-    }
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.project img {
+  max-width: 100%;
+  /* para não ultrapassar o container */
+  max-height: 400px;
+  /* altura máxima */
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  /* mantém toda a imagem visível, sem cortar */
+}
+
+.project-text {
+  width: 55%;
+}
+
+.project.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* centra horizontalmente os itens flexíveis */
+  text-align: center;
+  /* centra o texto dentro dos elementos */
+  gap: 1rem;
+  /* espaçamento entre elementos */
+  max-width: 900px;
+  /* opcional: limitar largura para não ficar muito esticado */
+  margin: 0 auto;
+  /* centra a div no container pai */
+  padding: 0 1rem;
+  /* um pouco de espaçamento lateral */
+}
+
+.main_pic {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* remove espaços em linha */
+  border-radius: 8px;
+  /* se quiseres cantos arredondados */
+  object-fit: cover;
+  /* mantém a proporção */
+  margin: 0 auto;
+  /* centraliza a imagem */
+}
+
+@media (max-width: 768px) {
+
+  .project,
+  .project.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project img,
+  .project-text {
+    width: 100%;
+  }
 }

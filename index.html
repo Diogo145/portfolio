@@ -9,6 +9,7 @@
     <script defer src="script.js"></script>
     <script defer src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
@@ -48,15 +49,44 @@
                 </p>
                 <h3>Competências Técnicas</h3>
                 <ul class="skills">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>Figma</li>
-                    <li>Unity</li>
-                    <li>React</li>
-                    <li>Git</li>
+                    <li>
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML5</span>
+                    </li>
+                    <li>
+                        <i class="devicon-css3-plain colored"></i>
+                        <span>CSS3</span>
+                    </li>
+                    <li>
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span>JavaScript</span>
+                    </li>
+                    <li>
+                        <i class="devicon-php-plain colored"></i>
+                        <span>PHP</span>
+                    </li>
+                    <li>
+                        <i class="devicon-python-plain colored"></i>
+                        <span>Python</span>
+                    </li>
+                    <li>
+                        <i class="devicon-java-plain colored"></i>
+                        <span>Java</span>
+                    </li>
+                    <li>
+                        <i class="devicon-kotlin-plain colored"></i>
+                        <span>Kotlin</span>
+                    </li>
+                    <li>
+                        <i class="devicon-wordpress-plain colored"></i>
+                        <span>WordPress</span>
+                    </li>
+                    <li>
+                        <i class="devicon-github-plain colored"></i>
+                        <span>Git</span>
+                    </li>
                 </ul>
-                <a href="media/cv.pdf" download="CV-Diogo-Soares.pdf" class="cvdownload">Download CV</a>
+                <a href="media/cv.pdf" target="_blank" download="CV-Diogo-Soares.pdf" class="cvdownload">Download CV</a>
             </div>
         </div>
     </section>
@@ -70,12 +100,20 @@
 
     <section id="contacto" class="contacto">
         <h2>Contacto</h2>
-        <form id="contact-form">
-            <input type="text" name="nome" placeholder="Nome" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <textarea name="mensagem" placeholder="Mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+        <div class="contact-card">
+            <div class="contact-info">
+                <h3>Entra em contacto</h3>
+                <p>Se tens dúvidas, sugestões ou queres entrar em contacto para oportunidades de estágio ou emprego, preenche o
+                    formulário ao lado. Responderei o mais rápido possível!
+                </p>
+            </div>
+            <form id="contact-form">
+                <input type="text" name="nome" placeholder="Nome" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </section>
 
     <footer>
@@ -85,6 +123,9 @@
         </a>
         <a href="https://www.linkedin.com/in/diogo-soares-0b5921219/" target="_blank" aria-label="LinkedIn">
             <i class="fab fa-linkedin" style="color: #ffffff; font-size: 40px"></i>
+        </a>
+        <a href="https://github.com/Diogo145" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github" style="color: #ffffff; font-size: 40px"></i>
         </a>
     </footer>
 </body>
