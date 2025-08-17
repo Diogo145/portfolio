@@ -16,18 +16,21 @@
     <header>
         <nav>
             <h1><a href="index.html">Diogo Soares</a></h1>
-            <button class="menu-toggle" aria-label="Abrir menu">
-                <i class="fas fa-bars"></i>
+            <button class="menu-toggle" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#experiencias">Experiências</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="sobre" class="sobre">
+    <section id="sobre" class="sobre reveal">
         <h2>Sobre Mim</h2>
         <div class="sobre-card">
             <div class="sobre-foto">
@@ -91,20 +94,27 @@
         </div>
     </section>
 
-    <section id="projetos" class="projetos">
+    <section id="projetos" class="projetos reveal">
         <h2>Projetos</h2>
         <div id="project-list" class="project-list">
             <!-- Projetos serão carregados aqui via JS -->
         </div>
     </section>
 
-    <section id="contacto" class="contacto">
+    <section id="experiencias" class="experiencias reveal">
+        <section>
+            <h2>Experiências</h2>
+            <div id="experience-list" class="experience-list"></div>
+        </section>
+    </section>
+
+    <section id="contacto" class="contacto reveal">
         <h2>Contacto</h2>
         <div class="contact-card">
             <div class="contact-info">
                 <h3>Entra em contacto</h3>
-                <p>Se tens dúvidas, sugestões ou queres entrar em contacto para oportunidades de estágio ou emprego, preenche o
-                    formulário ao lado. Responderei o mais rápido possível!
+                <p>Se procura um profissional para a sua equipa e caso o meu perfil se adeque às suas necessidades, 
+                    convido-o/a a preencher o formulário ao lado. Agradeço o seu contacto e consideração.
                 </p>
             </div>
             <form id="contact-form">

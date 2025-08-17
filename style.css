@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* === ESTILOS BASE === */
 body {
   font-family: Arial, sans-serif;
@@ -33,7 +39,6 @@ nav h1 a {
 
 nav h1 a:hover {
   color: rgb(0, 10, 100);
-  text-decoration: none;
 }
 
 nav ul {
@@ -63,7 +68,6 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  justify-content: auto;
   list-style: none;
   padding: 0;
 }
@@ -74,22 +78,17 @@ section {
   align-items: center;
   transition: transform 0.3s ease;
   font-size: 3rem;
-  /* tamanho dos ícones */
 }
 
 .skills li span {
   margin-top: 0.5rem;
   font-size: 0.9rem;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
 .skills li:hover {
   transform: scale(1.1);
-}
-
-.skills li:hover span {
-  opacity: 1;
 }
 
 .cvdownload {
@@ -105,21 +104,17 @@ section {
   background-color: #00286b;
 }
 
-.project-list {
+/* Listas de cards (projetos e experiências) */
+.project-list,
+.experience-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-.project-card {
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-}
-
-.project-card {
+/* Cartões de projetos e experiências */
+.project-card,
+.experience-card {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -127,18 +122,28 @@ section {
   display: flex;
   flex-direction: column;
   height: 100%;
+  transition: transform 0.3s ease;
 }
 
-.project-card img {
+.project-card:hover,
+.experience-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img,
+.experience-card img {
   width: 100%;
-  height: 180px;
+  height: 320px;
   object-fit: cover;
 }
 
-.project-card-content {
+/* Conteúdo interno dos cards */
+.project-card-content,
+.experience-card-content {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  gap: 0.5rem;
   flex-grow: 1;
 }
 
@@ -151,7 +156,6 @@ section {
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.3s ease;
-  margin-top: 1rem;
   margin-top: auto;
   align-self: flex-start;
 }
@@ -160,7 +164,22 @@ section {
   background-color: #00286b;
 }
 
+.experience-card-content h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #0049bd;
+}
 
+.experience-card-content p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.experience-card-content strong {
+  color: #333;
+}
+
+/* Sobre mim */
 .sobre-card {
   display: flex;
   flex-wrap: wrap;
@@ -169,15 +188,10 @@ section {
   max-width: 1200px;
   margin: auto;
   border: 2px solid #ddd;
-  /* Contorno */
   border-radius: 8px;
-  /* Cantos arredondados */
   padding: 2rem;
-  /* Espaço interno para não colar o texto à borda */
   background-color: #fff;
-  /* Para destacar do fundo */
 }
-
 
 .sobre-foto {
   flex: 1 1 250px;
@@ -204,24 +218,7 @@ h2 {
   font-size: 2.4rem;
 }
 
-@media (max-width: 768px) {
-  .sobre-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .sobre-info {
-    flex: 1 1 100%;
-  }
-
-  .skills {
-    justify-content: center;
-  }
-}
-
-/* Contacto: layout lado a lado e estilo do formulário melhorado */
-
+/* Contacto */
 .contacto h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -237,7 +234,6 @@ h2 {
   align-items: flex-start;
 }
 
-/* Cartão único que envolve texto e formulário */
 .contact-card {
   display: flex;
   gap: 3rem;
@@ -252,7 +248,6 @@ h2 {
   align-items: center;
 }
 
-/* Texto informativo */
 .contact-info {
   flex: 1 1 300px;
   font-size: 1.1rem;
@@ -275,7 +270,6 @@ h2 {
   text-decoration: underline;
 }
 
-/* Formulário */
 .contacto form {
   flex: 1 1 350px;
   display: flex;
@@ -285,12 +279,10 @@ h2 {
 
 .contacto form button[type="submit"] {
   background-color: #0049bd;
-  /* azul */
   color: white;
   border: none;
   border-radius: 8px;
   padding: 1.2rem 2rem;
-  /* maior altura e um pouco de largura */
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
@@ -299,7 +291,6 @@ h2 {
 
 .contacto form button[type="submit"]:hover {
   background-color: #00286b;
-  /* azul mais escuro no hover */
 }
 
 .contacto input,
@@ -323,20 +314,7 @@ h2 {
   min-height: 120px;
 }
 
-/* Responsivo: empilha no mobile */
-@media (max-width: 768px) {
-  .contact-card {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .contact-info,
-  .contacto form {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
@@ -350,13 +328,129 @@ footer {
   display: none;
   background: none;
   border: none;
-  font-size: 2rem;
-  color: white;
   cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 22px;
+  position: relative;
 }
 
-/* Responsivo: mostra o hambúrguer e esconde menu */
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  transition: all 0.4s ease;
+}
+
+.menu-toggle span:nth-child(1) {
+  top: 0;
+}
+
+.menu-toggle span:nth-child(2) {
+  top: 9px;
+}
+
+.menu-toggle span:nth-child(3) {
+  top: 18px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+
+/* Projetos em layout horizontal */
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 2rem 5rem;
+}
+
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.project img {
+  width: 50%;
+  height: 400px;
+  object-fit: fill;
+  border-radius: 8px;
+}
+
+.project-text {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* opcional: centraliza verticalmente */
+  align-items: center;
+  /* centraliza horizontalmente */
+}
+
+.project.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  margin-bottom: 4rem;
+}
+
+.main_pic {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* Media queries */
 @media (max-width: 768px) {
+  .projects-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  .sobre-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-info {
+    flex: 1 1 100%;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
   nav ul {
     display: none;
     flex-direction: column;
@@ -377,81 +471,86 @@ footer {
     display: block;
     margin-left: auto;
   }
-}
 
-.projects-section {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  padding: 2rem;
-}
+  .contact-card {
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+  }
 
-.project {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
+  .contact-container {
+    padding: 0 1rem;
+  }
 
-.project img {
-  max-width: 100%;
-  /* para não ultrapassar o container */
-  max-height: 400px;
-  /* altura máxima */
-  width: auto;
-  height: auto;
-  border-radius: 8px;
-  object-fit: contain;
-  /* mantém toda a imagem visível, sem cortar */
-}
-
-.project-text {
-  width: 55%;
-}
-
-.project.reverse {
-  flex-direction: row-reverse;
-}
-
-.project-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* centra horizontalmente os itens flexíveis */
-  text-align: center;
-  /* centra o texto dentro dos elementos */
-  gap: 1rem;
-  /* espaçamento entre elementos */
-  max-width: 900px;
-  /* opcional: limitar largura para não ficar muito esticado */
-  margin: 0 auto;
-  /* centra a div no container pai */
-  padding: 0 1rem;
-  /* um pouco de espaçamento lateral */
-}
-
-.main_pic {
-  width: 100%;
-  height: auto;
-  display: block;
-  /* remove espaços em linha */
-  border-radius: 8px;
-  /* se quiseres cantos arredondados */
-  object-fit: cover;
-  /* mantém a proporção */
-  margin: 0 auto;
-  /* centraliza a imagem */
-}
-
-@media (max-width: 768px) {
+  .contact-info,
+  .contacto form {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 
   .project,
   .project.reverse {
     flex-direction: column;
     text-align: center;
+    width: 100%;
+    /* garante que ocupa toda a largura */
+    max-width: 400px;
+    /* evita ficar demasiado largo */
+    margin: 0 auto 2rem;
+    /* centraliza e dá espaçamento vertical */
+    gap: 1.5rem;
+    /* reduz o gap para mobile */
   }
 
   .project img,
   .project-text {
     width: 100%;
+    /* ocupa toda a largura disponível */
   }
+
+  .project.active,
+  .project.reverse.active {
+    transform: translateX(0);
+    /* mantém animação mas sem deslocamento lateral */
+  }
+}
+
+/* Estado inicial (invisível) */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+/* Quando aparece no ecrã */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Projects normais (entram da direita) */
+.project {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 1s ease-out;
+  /* mais lento */
+}
+
+.project.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Projects reverse (entram da esquerda) */
+.project.reverse {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 1s ease-out;
+  /* igual ao .project */
+}
+
+.project.reverse.active {
+  opacity: 1;
+  transform: translateX(0);
 }

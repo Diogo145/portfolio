@@ -58,14 +58,74 @@ document.addEventListener("DOMContentLoaded", () => {
         list.appendChild(card);
     });
 
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.querySelector(".menu-toggle");
-    const navMenu = document.querySelector("nav ul");
+    // Lista de experiências
+    const experiencias = [
+        {
+            nome: "PAFSE European Project - Assistente",
+            descricao: "Apoio a professores e alunos na implementação de projetos científicos, elaboração de relatórios e acompanhamento de grupos de alunos durante o Open Day do ISEL.",
+            tipo: "Voluntariado",
+            periodo: "Março 2023 - Junho 2023",
+            local: "Lisboa, Portugal",
+            imagem: "media/pafse.jpeg"
+        },
+        {
+            nome: "Web Summit 2024 - Stand Promoter",
+            descricao: "Representação de uma startup portuguesa no maior evento tecnológico da Europa, promoção de soluções inovadoras e contacto com profissionais do setor.",
+            tipo: "Profissional / Evento",
+            periodo: "Novembro 2024",
+            local: "Lisboa, Portugal",
+            imagem: "media/ws.jpeg"
+        },
+        {
+            nome: "FUNDEC - Avaliador",
+            descricao: "Análise de candidaturas ao fundo ambiental, com foco em equipamentos energeticamente eficientes, avaliando segundo critérios técnicos e sustentáveis.",
+            tipo: "Profissional",
+            periodo: "Março 2024 - Presente",
+            local: "Lisboa, Portugal",
+            imagem: "media/paes.png"
+        }
+    ];
 
-    toggleBtn.addEventListener("click", () => {
-        navMenu.classList.toggle("show");
+    const expList = document.getElementById("experience-list");
+
+    experiencias.forEach((exp) => {
+        const card = document.createElement("div");
+        card.className = "experience-card";
+        card.innerHTML = `
+        <img src="${exp.imagem}" alt="${exp.nome}">
+        <div class="experience-card-content">
+            <h3>${exp.nome}</h3>
+            <p><strong>Tipo:</strong> ${exp.tipo}</p>
+            <p><strong>Período:</strong> ${exp.periodo}</p>
+            <p><strong>Local:</strong> ${exp.local}</p>
+            <p>${exp.descricao}</p>
+        </div>
+    `;
+        expList.appendChild(card);
     });
+
 });
 
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.querySelector("nav ul");
+
+menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    navMenu.classList.toggle("show");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".reveal, .project, .project.reverse");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target); // só anima uma vez
+      }
+    });
+  }, { threshold: 0.2 });
+
+  reveals.forEach(el => observer.observe(el));
+});

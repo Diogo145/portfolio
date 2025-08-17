@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Diogo Soares</title>
     <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+    <script defer src="proj_script.js"></script>
     <script defer src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
@@ -60,57 +60,345 @@
     <section class="projects-section">
 
         <div class="project">
-            <img src="media/ferramentas_metodologias.jpg" alt="Ferramentas e Metodologias">
+            <img src="media/proj1/ferramentas_metodologias.jpg" alt="Ferramentas e Metodologias">
             <div class="project-text">
                 <h2>Ferramenta / Metodologia</h2>
-                <p>Docker: Plataforma que permite criar, distribuir e executar aplicações em containers, garantindo que
-                    funcionam de forma consistente em diferetes ambientes. Explicar muito mais
-                    MobaXTerm, VS, Extensões
-                    WordPress como base de conteúdo
-                    PHP, HTML5, CSS5 e JavaScript
-                    Three.js e Visody para conteúdos 3D interativos
-                    Plugins: Visody, Gtranslate, WP SMTP, MaxUploader
-                </p>
+                <ul>
+                    <li><strong>Docker:</strong> Plataforma que permite criar, distribuir e executar aplicações em
+                        containers, garantindo que funcionam de forma consistente em diferentes ambientes. Explicar
+                        muito mais</li>
+                    <li>MobaXTerm, VS, Extensões</li>
+                    <li>WordPress como base de conteúdo</li>
+                    <li>PHP, HTML5, CSS3 e JavaScript</li>
+                    <li>Three.js e Visody para conteúdos 3D interativos</li>
+                    <li>Plugins: Visody, Gtranslate, WP SMTP, MaxUploader</li>
+                </ul>
             </div>
         </div>
 
         <div class="project reverse">
-            <img src="media/projeto2.jpg" alt="Projeto 2">
+            <img src="media/proj1/translate.png" alt="Gtranslate">
             <div class="project-text">
-                <h2>Projeto 2</h2>
-                <p>Descrição do projeto 2...</p>
+                <h2>Gtranslate</h2>
+                <ul>
+                    <li>Tradução automática do conteúdo do site</li>
+                    <li>Cobertura linguística ampla</li>
+                    <li>Facilidade de alternância entre idiomas</li>
+                    <li>Contribuição para a internacionalização do site</li>
+                    <li>Desvantagem: Qualidade da tradução</li>
+                </ul>
             </div>
         </div>
 
         <div class="project">
-            <img src="media/projeto3.jpg" alt="Projeto 3">
+            <img src="media/proj1/visody.png" alt="Visody">
             <div class="project-text">
-                <h2>Projeto 3</h2>
-                <p>Descrição do projeto 3...</p>
+                <h2>Visody</h2>
+                <ul>
+                    <li>Integração e visualização direta de modelos 3D no WordPress</li>
+                    <li>Suporte a ficheiros 3D interativos (.glb, .gltf)</li>
+                    <li>Manipulação, rotação e ampliação dos modelos em tempo real</li>
+                    <li>Experiência imersiva para os utilizadores</li>
+                    <li>Compatibilidade com dispositivos móveis</li>
+                    <li>Desempenho fluido na visualização dos modelos</li>
+                    <li>Ideal para apresentar modelos 3D de embarcações tradicionais</li>
+                    <li>Plugin MaxUploader</li>
+                </ul>
             </div>
         </div>
 
         <div class="project reverse">
-            <img src="media/projeto4.jpg" alt="Projeto 4">
+            <img src="" alt="WP SMTP">
             <div class="project-text">
-                <h2>Projeto 4</h2>
-                <p>Descrição do projeto 4...</p>
+                <h2>WP SMTP</h2>
+                <ul>
+                    <li>Envio confiável de e-mails pelo site</li>
+                    <li>Redução de problemas com spam ou bloqueios</li>
+                    <li>Utilização de credenciais SMTP personalizadas</li>
+                    <li>Substituição do envio nativo de e-mails do WordPress</li>
+                    <li>Garantia de que os e-mails chegam corretamente ao destino</li>
+                </ul>
             </div>
         </div>
 
         <div class="project">
-            <img src="media/projeto5.jpg" alt="Projeto 5">
+            <img src="media/proj1/homepage.png" alt="Homepage">
             <div class="project-text">
-                <h2>Projeto 5</h2>
-                <p>Descrição do projeto 5...</p>
+                <h2>Homepage</h2>
+                <ul>
+                    <li>Página inicial com visão geral do site</li>
+                    <li>Destaque para blogs e projetos</li>
+                    <li>Construída com o template <code>front-page.php</code></li>
+                    <li>Usa componentes como <code>project-section.php</code> e <code>blog-section.php</code></li>
+                    <li>Conteúdos exibidos dinamicamente e sempre atualizados</li>
+                </ul>
             </div>
         </div>
 
         <div class="project reverse">
-            <img src="media/projeto6.jpg" alt="Projeto 6">
+            <img src="media/proj1/homepage_blogs.png" alt="Secção de Blogs da Homepage">
             <div class="project-text">
-                <h2>Projeto 6</h2>
-                <p>Descrição do projeto 6...</p>
+                <h2>Secção de Blogs da Homepage</h2>
+                <ul>
+                    <li><code>blog-section.php</code> realiza consulta personalizada ao tipo de conteúdo
+                        <code>post</code>
+                    </li>
+                    <li>Exibe os artigos mais recentes do blog em formato de carrossel interativo</li>
+                    <li>Uso do Owl-Carousel (lib JS)</li>
+                    <li>Apresenta miniaturas, títulos e resumos automáticos para cada publicação</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="media/proj1/homepage_projs.png" alt="Secção de Projetos da Homepage">
+            <div class="project-text">
+                <h2>Secção de Projetos da Homepage</h2>
+                <ul>
+                    <li><code>projetos-section.php</code> faz uma consulta personalizada (<code>WP_Query</code>) ao tipo
+                        de conteúdo <code>projeto</code></li>
+                    <li>Exibe até 8 projetos recentes em formato de carrossel interativo</li>
+                    <li>Cada item usa o estilo <code>project-card</code>, com imagem, excerto e link para o conteúdo
+                        completo</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project reverse">
+            <img src="media/proj1/servicos.png" alt="Serviços">
+            <div class="project-text">
+                <h2>Página dos Serviços</h2>
+                <ul>
+                    <li>Página de serviços construída com blocos manuais no editor do WordPress, sem uso de templates
+                        PHP</li>
+                    <li>Estrutura organizada com blocos de Grupo, títulos e parágrafos com classes CSS personalizadas
+                    </li>
+                    <li>Estilo visual definido no ficheiro CSS do tema, garantindo uniformidade e responsividade</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="media/proj1/blogs.png" alt="Blogs">
+            <div class="project-text">
+                <h2>Página dos Blogs</h2>
+                <ul>
+                    <li>Página de blog utiliza o template <code>index.php</code> e carrega os posts
+                        (<code>post type</code>) dinamicamente</li>
+                    <li>Cada blog é renderizado com o componente <code>project-card.php</code></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project reverse">
+            <img src="media/proj1/blog.png" alt="Blog_especifico">
+            <div class="project-text">
+                <h2>Página do Blog Específico</h2>
+                <ul>
+                    <li>Botão "Ver Mais" direciona para a página individual do blog, gerada com o template universal
+                        <code>single.php</code>
+                    </li>
+                    <li>O template chama o ficheiro <code>content-post.php</code> para exibir o conteúdo completo</li>
+                    <li>Mostra título, texto detalhado e imagens, mantendo coerência visual e estrutural</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="media/proj1/projs.png" alt="Projetos">
+            <div class="project-text">
+                <h2>Página dos Projetos</h2>
+                <ul>
+                    <li>Criação de um tipo de post: <strong>Projeto</strong></li>
+                    <li>Página de projetos usa o template <code>archive-projeto.php</code> e carrega os projetos
+                        (<code>project type</code>) dinamicamente</li>
+                    <li>Cada projeto é exibido com o componente <code>project-card.php</code></li>
+                    <li>Exibe imagem, título (<em>no-translate</em>), excerto e botão</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project reverse">
+            <img src="media/proj1/proj.png" alt="Projeto_especifico">
+            <div class="project-text">
+                <h2>Página do Projeto Específico</h2>
+                <ul>
+                    <li>Botão “Ver Mais” direciona para a página individual do projeto, com o template
+                        <code>single.php</code>
+                    </li>
+                    <li>Esse template invoca o ficheiro <code>content-projeto.php</code> para exibir o conteúdo completo
+                    </li>
+                    <li>Apresenta título (<em>no-translate</em>), texto, imagens e modelo 3D interativo (VISODY)</li>
+                    <li>Limite de carregamento por ficheiro (Max_Uploader)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="media/proj1/contact_form.png" alt="Contact_form">
+            <div class="project-text">
+                <h2>Secção do Formulário da Página dos Contactos</h2>
+                <ul>
+                    <li>Formulário de contacto com campos personalizados e com validação:
+                        <ul>
+                            <li>Sanitização</li>
+                            <li>reCAPTCHA</li>
+                        </ul>
+                    </li>
+                    <li>Armazenamento dos dados na tabela personalizada <code>wp_contact_us_pedidos</code></li>
+                    <li>Envio de duas mensagens em HTML (para o admin e para o utilizador) e mensagens de feedback
+                        claras em caso de erro ou sucesso (<code>WP SMTP</code>)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project reverse">
+            <img src="media/proj1/contact_address.png" alt="Contact_address">
+            <div class="project-text">
+                <h2>Secção da Morada da Página dos Contactos</h2>
+                <ul>
+                    <li>Informações de contacto e morada</li>
+                    <li>Email e telemóvel a um clique</li>
+                    <li>Uso de Google Maps com <code>iframe</code></li>
+                    <li>Morada - <em>no-translate</em></li>
+                    <li>Complementa o formulário de contacto, facilitando a localização e interação rápida com o
+                        estaleiro</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="media/proj1/galery_tejo.png" alt="Galeria_Tejo">
+            <div class="project-text">
+                <h2>Página da Galeria do Rio Tejo</h2>
+                <ul>
+                    <li>Uso do template personalizado <code>page-gallery.php</code></li>
+                    <li>Uso do Glightbox (lib JS) para visualização ampliada</li>
+                    <li>Navegação intuitiva e visual moderno, com experiência fluida em desktop e mobile</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project reverse">
+            <img src="media/proj1/galery_estaleiro.png" alt="Galeria_Estaleiro">
+            <div class="project-text">
+                <h2>Página da Galeria do Estaleiro</h2>
+                <ul>
+                    <li>Utiliza o mesmo template do <code>page-gallery.php</code></li>
+                    <li>Herda a estrutura e estilo do template original</li>
+                    <li>Permite consistência visual entre galerias diferentes</li>
+                    <li>Facilita manutenção e atualização do layout</li>
+                    <li>Compatível com Glightbox e navegação responsiva</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="media/proj1/about_pt1.png" alt="About1">
+            <div class="project-text">
+                <h2>Secção Sobre Nós - História do Estaleiro</h2>
+                <ul>
+                    <li>Identidade</li>
+                    <li>Missão e valores do Estaleiro Naval de Sarilhos Pequenos</li>
+                    <li>Destacar a carpintaria naval artesanal</li>
+                    <li>Preservação do património cultural do estuário do Tejo</li>
+                    <li>Narração envolvente sobre a história do estaleiro, sua importância comunitária e o saber
+                        acumulado de gerações</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project reverse">
+            <img src="media/proj1/about_pt2.png" alt="About2">
+            <div class="project-text">
+                <h2>Secção Sobre Nós - Q&A's ao Mestre Jaime</h2>
+                <ul>
+                    <li>Rigor técnico na construção e restauro de embarcações tradicionais e a dimensão humana da arte
+                    </li>
+                    <li>A escassez da mão de obra especializada e os desafios para a continuidade do ofício</li>
+                    <li>Abertura do estaleiro à comunidade com visitas guiadas e oficinas educativas, valorizando o
+                        legado patrimonial material e imaterial</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="media/proj1/404.png" alt="404">
+            <div class="project-text">
+                <h2>Página de Erro 404</h2>
+                <ul>
+                    <li>Página 404 personalizada utilizando o <code>404.php</code></li>
+                    <li>Inclui título, subtítulo explicativo, mensagem criativa e formulário de pesquisa para facilitar
+                        a navegação</li>
+                    <li>Botão para retornar à página inicial</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project reverse">
+            <img src="media/proj1/search.png" alt="Search Results">
+            <div class="project-text">
+                <h2>Página Search Results</h2>
+                <ul>
+                    <li>Página com resultados da pesquisa personalizada utilizando o template <code>search.php</code>
+                    </li>
+                    <li>Cada resultado é exibido com o componente <code>project-card.php</code></li>
+                    <li>Botão para os respetivos conteúdos completos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="media/proj1/navbar.png" alt="Header">
+            <div class="project-text">
+                <h2>Header</h2>
+                <ul>
+                    <li>Header utiliza o template <code>header.php</code></li>
+                    <li>Inclui logo, título (<em>no-translate</em>) e imagem</li>
+                    <li>Menu principal com itens e sub-itens</li>
+                    <li>Menu encolhido em ecrãs pequenos</li>
+                    <li>Responsivo</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project reverse">
+            <img src="media/proj1/footer.png" alt="Footer">
+            <div class="project-text">
+                <h2>Footer</h2>
+                <ul>
+                    <li>Footer utiliza o template <code>footer.php</code></li>
+                    <li>Menu principal com itens</li>
+                    <li>Contactos</li>
+                    <li>Dedicatória</li>
+                    <li>Pesquisar</li>
+                    <li>Responsivo</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="media/proj1/tests.png" alt="Tests">
+            <div class="project-text">
+                <h2>Validação e Testes</h2>
+                <ul>
+                    <li>Site funcional com todas as secções</li>
+                    <li>Navegação intuitiva e responsiva</li>
+                    <li>Desempenho:
+                        <ul>
+                            <li>Desktop: LCP 2.2s</li>
+                            <li>Mobile: LCP 14.9s</li>
+                        </ul>
+                    </li>
+                    <li>Compatibilidade dos browsers</li>
+                    <li>Acessibilidade</li>
+                    <li>Scripts testados com fallback e 404</li>
+                    <li>Ferramentas de performance:
+                        <ul>
+                            <li>Page Speed Insights</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
 
