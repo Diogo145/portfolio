@@ -1,20 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Inicializa o EmailJS
-    emailjs.init("67Xl5tihLlrLTywI-");
-
-    // Formulário de contacto
-    const form = document.getElementById("contact-form");
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        emailjs.sendForm("service_ayefoe8", "template_sl5lqbr", this)
-            .then(() => {
-                alert("Mensagem enviada com sucesso!");
-                form.reset();
-            }, (error) => {
-                alert("Erro ao enviar: " + error.text);
-            });
+    // === EmailJS ===
+    emailjs.init({
+        publicKey: "67Xl5tihLlrLTywI-",
     });
+
+    const form = document.getElementById("contact-form");
+    if (form) {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm("service_ayefoe8", "template_sl5lqbr", this)
+                .then(() => {
+                    alert("Mensagem enviada com sucesso!");
+                    form.reset();
+                }, (error) => {
+                    alert("Erro ao enviar: " + error.text);
+                });
+        });
+    }
 
     // Lista de projetos
     const projetos = [
@@ -113,6 +116,14 @@ const navMenu = document.querySelector("nav ul");
 menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("active");
     navMenu.classList.toggle("show");
+});
+
+// Fecha o menu ao clicar em qualquer link
+document.querySelectorAll("nav ul li a").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+        menuBtn.classList.remove("active");
+    });
 });
 
 document.addEventListener("DOMContentLoaded", () => {

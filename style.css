@@ -24,6 +24,7 @@ nav {
   align-items: center;
   padding: 1rem 2rem;
   color: white;
+  position: relative;
 }
 
 nav h1 {
@@ -48,6 +49,7 @@ nav ul {
   margin: 0;
   padding: 0;
   margin-left: auto;
+  font-size: 1.5rem;
 }
 
 nav ul li a {
@@ -162,6 +164,12 @@ section {
 
 .project-card-content a:hover {
   background-color: #00286b;
+}
+
+.project-card-content h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #0049bd;
 }
 
 .experience-card-content h3 {
@@ -391,7 +399,10 @@ footer {
   width: 50%;
   height: 400px;
   object-fit: fill;
+  border: 2px solid #000000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.40);
   border-radius: 8px;
+
 }
 
 .project-text {
@@ -399,9 +410,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* opcional: centraliza verticalmente */
   align-items: center;
-  /* centraliza horizontalmente */
 }
 
 .project.reverse {
@@ -427,6 +436,8 @@ footer {
   border-radius: 8px;
   object-fit: cover;
   margin: 0 auto;
+  border: 2px solid #000000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.40);
 }
 
 /* Media queries */
@@ -461,6 +472,8 @@ footer {
     width: 200px;
     padding: 1rem;
     border-radius: 0 0 8px 8px;
+    z-index: 1000;
+
   }
 
   nav ul.show {

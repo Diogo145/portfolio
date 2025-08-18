@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
   const reveals = document.querySelectorAll(".project, .project.reverse");
 
   const observer = new IntersectionObserver((entries) => {
@@ -12,3 +12,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   reveals.forEach(el => observer.observe(el));
 });
+*/

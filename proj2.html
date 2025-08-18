@@ -7,7 +7,7 @@
     <title>Portfolio | Diogo Soares</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
-    <script defer src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
@@ -17,17 +17,20 @@
     <header>
         <nav>
             <h1><a href="index.html">Diogo Soares</a></h1>
-            <button class="menu-toggle" aria-label="Abrir menu">
-                <i class="fas fa-bars"></i>
+            <button class="menu-toggle" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
             <ul>
                 <li><a href="index.html#sobre">Sobre</a></li>
                 <li><a href="index.html#projetos">Projetos</a></li>
+                <li><a href="index.html#experiencias">Experiências</a></li>
                 <li><a href="index.html#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <div class="project-intro">
+    <div class="project-intro reveal">
         <h2>Portfolio Pessoal</h2>
         <p>Website pessoal construído de raíz por mim com HTML, CSS e JavaScript puro para mostrar projetos e contacto.
         </p>
@@ -51,50 +54,91 @@
     <section class="projects-section">
 
         <div class="project">
-            <img src="media/projeto1.jpg" alt="Projeto 1">
+            <img src="media/proj2/headers.png" alt="Header">
             <div class="project-text">
-                <h2>Projeto 1</h2>
-                <p>Descrição do projeto 1...</p>
+                <h2>Header</h2>
+                <ul>
+                    <li>Contém a barra de navegação com o meu nome e links para as secções principais.</li>
+                    <li>Possui um botão de menu `hamburguer` para ecrãs mais pequenos, que é responsável por mostrar ou
+                        esconder os links de navegação.</li>
+                    <li>O cabeçalho é responsivo.</li>
+                </ul>
             </div>
         </div>
 
         <div class="project reverse">
-            <img src="media/projeto2.jpg" alt="Projeto 2">
+            <img src="media/proj2/sobre.png" alt="Sobre Mim">
             <div class="project-text">
-                <h2>Projeto 2</h2>
-                <p>Descrição do projeto 2...</p>
+                <h2>Sobre Mim</h2>
+                <ul>
+                    <li>Apresenta uma biografia minha, destacando a minha formação e abordagem criativa e
+                        técnica.</li>
+                    <li>Exibe as minhas competências técnicas com ícones para HTML5, CSS3, JavaScript, PHP, Python, Java,
+                        Kotlin, WordPress e Git.</li>
+                    <li>Inclui um botão para descarregar o currículo em PDF.</li>
+                </ul>
             </div>
         </div>
 
         <div class="project">
-            <img src="media/projeto3.jpg" alt="Projeto 3">
+            <img src="media/proj2/projs.png" alt="Projetos">
             <div class="project-text">
-                <h2>Projeto 3</h2>
-                <p>Descrição do projeto 3...</p>
+                <h2>Projetos</h2>
+                <ul>
+                    <li>Esta secção carrega dinamicamente os projetos a partir de um array JavaScript.</li>
+                    <li>Cada projeto é exibido num cartão com a sua imagem, nome, descrição, tecnologias e um link para
+                        a página de detalhes.</li>
+                    <li>Os cartões de projeto têm um efeito de `hover` que os amplia.</li>
+                </ul>
             </div>
         </div>
 
         <div class="project reverse">
-            <img src="media/projeto4.jpg" alt="Projeto 4">
+            <img src="media/proj2/proj_individual.png" alt="Página específica de projeto">
             <div class="project-text">
-                <h2>Projeto 4</h2>
-                <p>Descrição do projeto 4...</p>
+                <h2>Página específica de projeto</h2>
+                <ul>
+                    <li>Fornece informações detalhadas sobre um único projeto, com título, descrição e tecnologias
+                        utilizadas.</li>
+                    <li>O conteúdo principal consiste em blocos de texto e imagem que alternam a posição
+                        (esquerda/direita).</li>
+                    <li>As páginas de projeto usam animações de entrada que deslizam o conteúdo.</li>
+                </ul>
             </div>
         </div>
 
         <div class="project">
-            <img src="media/projeto5.jpg" alt="Projeto 5">
+            <img src="media/proj2/exps.png" alt="Experiências">
             <div class="project-text">
-                <h2>Projeto 5</h2>
-                <p>Descrição do projeto 5...</p>
+                <h2>Experiências</h2>
+                <ul>
+                    <li>Gera dinamicamente uma lista de experiências a partir de um array JavaScript.</li>
+                    <li>Cada experiência é apresentada num cartão com nome, tipo, período, local e descrição.</li>
+                    <li>Os cartões de experiência também têm um efeito de `hover` que os amplia.</li>
+                </ul>
             </div>
         </div>
 
         <div class="project reverse">
-            <img src="media/projeto6.jpg" alt="Projeto 6">
+            <img src="media/proj2/contacto.png" alt="Contactos">
             <div class="project-text">
-                <h2>Projeto 6</h2>
-                <p>Descrição do projeto 6...</p>
+                <h2>Contactos</h2>
+                <ul>
+                    <li>Inclui uma mensagem de boas-vindas e um formulário de contacto.</li>
+                    <li>O formulário envia as mensagens usando EmailJS e apresenta uma mensagem de confirmação ou erro.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="media/proj2/footer.png" alt="Footer">
+            <div class="project-text">
+                <h2>Footer</h2>
+                <ul>
+                    <li>Contém o aviso de direitos de autor: `© 2025 Diogo Soares`.</li>
+                    <li>Inclui links para os perfis de Instagram, LinkedIn e GitHub.</li>
+                </ul>
             </div>
         </div>
 
@@ -106,6 +150,9 @@
         </a>
         <a href="https://www.linkedin.com/in/diogo-soares-0b5921219/" target="_blank" aria-label="LinkedIn">
             <i class="fab fa-linkedin" style="color: #ffffff; font-size: 40px"></i>
+        </a>
+        <a href="https://github.com/Diogo145" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github" style="color: #ffffff; font-size: 40px"></i>
         </a>
     </footer>
 </body>

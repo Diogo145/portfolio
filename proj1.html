@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Diogo Soares</title>
     <link rel="stylesheet" href="style.css" />
-    <script defer src="proj_script.js"></script>
-    <script defer src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script defer src="script.js"></script>
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
@@ -17,17 +17,20 @@
     <header>
         <nav>
             <h1><a href="index.html">Diogo Soares</a></h1>
-            <button class="menu-toggle" aria-label="Abrir menu">
-                <i class="fas fa-bars"></i>
+            <button class="menu-toggle" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
             <ul>
                 <li><a href="index.html#sobre">Sobre</a></li>
                 <li><a href="index.html#projetos">Projetos</a></li>
+                <li><a href="index.html#experiencias">Experiências</a></li>
                 <li><a href="index.html#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <div class="project-intro">
+    <div class="project-intro reveal">
         <h2>Website Estaleiro de Sarilhos Pequenos</h2>
         <p>Website institucional desenvolvido para o Estaleiro de Sarilhos Pequenos, apresentando informações sobre
             serviços, história, projetos, entre outros, com design responsivo e otimizado para diferentes dispositivos.
@@ -64,7 +67,7 @@
             <div class="project-text">
                 <h2>Ferramenta / Metodologia</h2>
                 <ul>
-                    <li><strong>Docker:</strong> Plataforma que permite criar, distribuir e executar aplicações em
+                    <li>Docker: Plataforma que permite criar, distribuir e executar aplicações em
                         containers, garantindo que funcionam de forma consistente em diferentes ambientes. Explicar
                         muito mais</li>
                     <li>MobaXTerm, VS, Extensões</li>
@@ -108,7 +111,7 @@
         </div>
 
         <div class="project reverse">
-            <img src="" alt="WP SMTP">
+            <img src="media/proj1/smtp.jpeg" alt="WP SMTP">
             <div class="project-text">
                 <h2>WP SMTP</h2>
                 <ul>
@@ -410,6 +413,9 @@
         </a>
         <a href="https://www.linkedin.com/in/diogo-soares-0b5921219/" target="_blank" aria-label="LinkedIn">
             <i class="fab fa-linkedin" style="color: #ffffff; font-size: 40px"></i>
+        </a>
+        <a href="https://github.com/Diogo145" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github" style="color: #ffffff; font-size: 40px"></i>
         </a>
     </footer>
 </body>
