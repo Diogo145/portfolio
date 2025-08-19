@@ -36,6 +36,8 @@ nav h1 a {
   color: white;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-family: 'Playfair Display', sans-serif;
+  letter-spacing: 1px;
 }
 
 nav h1 a:hover {
@@ -59,7 +61,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  color: rgb(0, 10, 100);
 }
 
 section {
@@ -98,8 +102,12 @@ section {
   color: white;
   padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
 }
 
 .cvdownload:hover {
@@ -507,25 +515,19 @@ footer {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    /* garante que ocupa toda a largura */
     max-width: 400px;
-    /* evita ficar demasiado largo */
     margin: 0 auto 2rem;
-    /* centraliza e dá espaçamento vertical */
     gap: 1.5rem;
-    /* reduz o gap para mobile */
   }
 
   .project img,
   .project-text {
     width: 100%;
-    /* ocupa toda a largura disponível */
   }
 
   .project.active,
   .project.reverse.active {
     transform: translateX(0);
-    /* mantém animação mas sem deslocamento lateral */
   }
 }
 
@@ -547,7 +549,6 @@ footer {
   opacity: 0;
   transform: translateX(60px);
   transition: all 1s ease-out;
-  /* mais lento */
 }
 
 .project.active {
@@ -560,7 +561,6 @@ footer {
   opacity: 0;
   transform: translateX(-60px);
   transition: all 1s ease-out;
-  /* igual ao .project */
 }
 
 .project.reverse.active {

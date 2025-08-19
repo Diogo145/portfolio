@@ -5,12 +5,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Diogo Soares</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
-    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script defer type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        .projects-section .project img {
+            width: 20%;
+        }
 
+        .projects-section .project-text {
+            width: 65%;
+        }
+
+        .projects-section .project {
+            justify-content: space-around;
+        }
+
+        @media (max-width: 768px) {
+            .projects-section .project img {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +53,8 @@
     </header>
     <div class="project-intro reveal">
         <h2>App de marcações para barbearia</h2>
-        <p>Aplicação para agendamento de serviços de barbearia, com funcionalidades de login, gestão de reservas e notificações
+        <p>Aplicação para agendamento de serviços de barbearia, com funcionalidades de login, gestão de reservas e
+            notificações
         </p>
         <h3>Tecnologias Utilizadas</h3>
         <ul class="skills" style="align-items: center;">
@@ -49,55 +71,130 @@
                 <span>Android</span>
             </li>
         </ul>
-        <img class=main_pic src="media/barbearia.jpeg" alt="Screenshot da App da Barbearia" />
+        <img class=main_pic src="media/proj3/all.png" alt="Screenshot da App da Barbearia" />
     </div>
     <section class="projects-section">
 
         <div class="project">
-            <img src="media/projeto1.jpg" alt="Projeto 1">
+            <img src="media/proj3/login.png" alt="Ecrã de Login">
             <div class="project-text">
-                <h2>Projeto 1</h2>
-                <p>Descrição do projeto 1...</p>
+                <h2>Ecrã de Login</h2>
+                <ul>
+                    <li>Permite o login de utilizadores através de email e palavra-passe.</li>
+                    <li>Utiliza a autenticação do Firebase.</li>
+                    <li>Inclui um botão para navegar para o ecrã de registo.</li>
+                    <li>Contém um login especial para o administrador.</li>
+                </ul>
             </div>
         </div>
 
         <div class="project reverse">
-            <img src="media/projeto2.jpg" alt="Projeto 2">
+            <img src="media/proj3/registo.png" alt="Ecrã de Registo">
             <div class="project-text">
-                <h2>Projeto 2</h2>
-                <p>Descrição do projeto 2...</p>
+                <h2>Ecrã de Registo</h2>
+                <ul>
+                    <li>Permite que novos utilizadores criem uma conta.</li>
+                    <li>Valida a confirmação da palavra-passe e cria um novo utilizador no Firebase Auth.</li>
+                    <li>Guarda a informação do utilizador (nome e telefone) no Firestore.</li>
+                    <li>Inclui um botão para regressar ao ecrã de login.</li>
+                </ul>
             </div>
         </div>
 
         <div class="project">
-            <img src="media/projeto3.jpg" alt="Projeto 3">
+            <img src="media/proj3/homepage.png" alt="Ecrã da Página Inicial">
             <div class="project-text">
-                <h2>Projeto 3</h2>
-                <p>Descrição do projeto 3...</p>
+                <h2>Ecrã da Página Inicial</h2>
+                <ul>
+                    <li>Página de entrada para o utilizador, exibindo a última marcação agendada.</li>
+                    <li>Exibe galerias de imagens de clientes e do espaço da barbearia.</li>
+                    <li>Permite navegar para outras secções da aplicação através do menu lateral.</li>
+                </ul>
             </div>
         </div>
 
         <div class="project reverse">
-            <img src="media/projeto4.jpg" alt="Projeto 4">
+            <img src="media/proj3/perfil.png" alt="Meu perfil">
             <div class="project-text">
-                <h2>Projeto 4</h2>
-                <p>Descrição do projeto 4...</p>
+                <h2>Meu perfil</h2>
+                <ul>
+                    <li>Ecrã para o utilizador visualizar e gerir as suas marcações.</li>
+                    <li>Possui três separadores: "Perfil", "Marcações" e "Saldo".</li>
+                    <li>Obtém e exibe a informação do utilizador e das marcações do Firestore.</li>
+                </ul>
             </div>
         </div>
 
         <div class="project">
-            <img src="media/projeto5.jpg" alt="Projeto 5">
+            <img src="media/proj3/recomendacao.png" alt="Recomendação">
             <div class="project-text">
-                <h2>Projeto 5</h2>
-                <p>Descrição do projeto 5...</p>
+                <h2>Ecrã de Código de Recomendação</h2>
+                <ul>
+                    <li>Exibe um código de recomendação para o utilizador.</li>
+                    <li>Inclui um botão para partilhar o código.</li>
+                    <li>Permite o utilizador voltar à página inicial.</li>
+                </ul>
             </div>
         </div>
 
         <div class="project reverse">
-            <img src="media/projeto6.jpg" alt="Projeto 6">
+            <img src="media/proj3/marcacoes.png" alt="Ecrã de Marcações">
             <div class="project-text">
-                <h2>Projeto 6</h2>
-                <p>Descrição do projeto 6...</p>
+                <h2>Ecrã de Marcações</h2>
+                <ul>
+                    <li>Exibe uma lista de serviços disponíveis, obtidos do Firestore.</li>
+                    <li>Permite ao utilizador selecionar um serviço para continuar o processo de marcação.</li>
+                    <li>Contém a barra de navegação inferior padrão para alternar entre ecrãs.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="media/proj3/barbeiros.png" alt="Ecrã de Barbeiros">
+            <div class="project-text">
+                <h2>Ecrã de Barbeiros</h2>
+                <ul>
+                    <li>Apresenta uma lista dos barbeiros disponíveis.</li>
+                    <li>Permite ao utilizador selecionar um barbeiro para a sua marcação.</li>
+                    <li>Obtém a lista de barbeiros a partir do Firestore.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project reverse">
+            <img src="media/proj3/horarios.png" alt="Ecrã de Seleção de Data e Hora">
+            <div class="project-text">
+                <h2>Ecrã de Seleção de Data e Hora</h2>
+                <ul>
+                    <li>Permite ao utilizador escolher a data da sua marcação usando um seletor de data.</li>
+                    <li>Apresenta uma lista de horários disponíveis.</li>
+                    <li>Navega para o próximo ecrã após a seleção da data e hora.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="media/proj3/confirmar.png" alt="Confirmar Marcação">
+            <div class="project-text">
+                <h2>Ecrã de Confirmação de Marcação</h2>
+                <ul>
+                    <li>Exibe o resumo da marcação selecionada pelo utilizador.</li>
+                    <li>Permite ao utilizador guardar a marcação no Firestore.</li>
+                    <li>Mostra o serviço, barbeiro, data e hora selecionados.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project reverse">
+            <img src="media/proj3/admin.png" alt="Admin Home Screen">
+            <div class="project-text">
+                <h2>Admin Home Screen</h2>
+                <ul>
+                    <li>Ecrã de administração para gerir serviços, barbeiros, imagens de portfólio e marcações.</li>
+                    <li>Permite adicionar, editar e apagar serviços e barbeiros.</li>
+                    <li>Oferece a possibilidade de visualizar e editar marcações existentes.</li>
+                    <li>Integra-se com o Firestore para persistência de dados.</li>
+                </ul>
             </div>
         </div>
 
@@ -115,4 +212,5 @@
         </a>
     </footer>
 </body>
+
 </html>

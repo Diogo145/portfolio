@@ -26,22 +26,22 @@ document.addEventListener("DOMContentLoaded", () => {
             descricao: "Website institucional desenvolvido para o Estaleiro de Sarilhos Pequenos, apresentando informações sobre serviços, história, projetos, entre outros, com design responsivo e otimizado para diferentes dispositivos.",
             tecnologias: ["WordPress", "PHP", "CSS", "HTML", "JavaScript"],
             link: "proj1.html",
-            imagem: "media/estaleiro.jpg"
+            imagem: "media/proj1/estaleiro.jpg"
+        },
+        {
+            nome: "App de Agendamentos para Barbearia",
+            descricao: "Aplicação completa para o agendamento de serviços numa barbearia, oferecendo funcionalidades de login seguro, gestão detalhada das reservas dos clientes, o histórico de clientes e uma interface intuitiva e responsiva.",
+            tecnologias: ["Kotlin", "Firebase", "Android"],
+            link: "proj3.html",
+            imagem: "media/proj3/all.png"
         },
         {
             nome: "Portfolio Pessoal",
-            descricao: "Website pessoal com HTML, CSS e JavaScript puro para mostrar projetos e contacto.",
+            descricao: "Website pessoal desenvolvido com HTML, CSS e JavaScript puro, criado para apresentar de forma organizada e interativa os meus projetos, habilidades e informações de contacto, com design responsivo e navegação intuitiva.",
             tecnologias: ["HTML", "CSS", "JavaScript"],
             link: "proj2.html",
-            imagem: "media/portfolio.jpg"
+            imagem: "media/proj2/portfolio.png"
         },
-        {
-            nome: "App de marcações para barbearia",
-            descricao: "Aplicação para agendamento de serviços de barbearia, com funcionalidades de login, gestão de reservas e notificações.",
-            tecnologias: ["Kotlin", "Firebase", "Android"],
-            link: "proj3.html",
-            imagem: "media/barbearia.jpeg"
-        }
     ];
 
     const list = document.getElementById("project-list");
@@ -118,12 +118,29 @@ menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("show");
 });
 
-// Fecha o menu ao clicar em qualquer link
-document.querySelectorAll("nav ul li a").forEach(link => {
-    link.addEventListener("click", () => {
-        navMenu.classList.remove("show");
-        menuBtn.classList.remove("active");
-    });
+// aplica scroll suave manualmente apenas se o destino for da mesma página
+document.querySelectorAll('nav ul li a').forEach(link => {
+  link.addEventListener('click', e => {
+    const targetId = link.getAttribute('href'); 
+
+    // Verifica se é um link interno (começa com "#")
+    if (targetId.startsWith('#')) {
+      e.preventDefault(); // evita salto imediato
+
+      const target = document.querySelector(targetId);
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 60, // -60px para compensar o header
+          behavior: 'smooth'
+        });
+      }
+
+      // fechar o menu hambúrguer depois de clicar
+      document.querySelector("nav ul").classList.remove("show");
+      document.getElementById("menuBtn").classList.remove("active");
+    }
+    // Caso contrário (outra página), deixa o link funcionar normalmente
+  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
